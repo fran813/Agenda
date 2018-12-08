@@ -18,6 +18,7 @@ public class Contacto {
 		this.setTelefono(telefono);
 		this.setCorreo(correo);
 	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -28,9 +29,9 @@ public class Contacto {
 
 			throw new IllegalArgumentException("El nombre de un contacto no puede ser nulo o vacío.");
 		}
-		
+
 		this.nombre = nombre;
-		
+
 	}
 
 	public String getTelefono() {
@@ -59,36 +60,37 @@ public class Contacto {
 
 	public void setCorreo(String correo) {
 
-		
 		if (correo == null || correo.isEmpty() == true) {
 			throw new IllegalArgumentException("El correo de un contacto no puede ser nulo o vacío.");
 		}
 
 		Pattern pat = Pattern.compile(ER_CORREO);
 		Matcher introducirCorreo = pat.matcher(correo);
-		
+
 		if (introducirCorreo.matches() == true) {
 			this.correo = correo;
-		}else {
+		} else {
 			throw new IllegalArgumentException("El correo no tiene un formato válido.");
 		}
 	}
+
 	@Override
 	public String toString() {
-		return getIniciales()+" ["+telefono+", "+correo+"]";
+		return getIniciales() + " [" + telefono + ", " + correo + "]";
 	}
+
 	private String getIniciales() {
-		
-		String iniciales=""+nombre.charAt(0);
-		for (int i=0; i<nombre.length(); i++) {
-			if (nombre.charAt(i)==' ') {
-				iniciales+=nombre.charAt(i+1);
+
+		String iniciales = "" + nombre.charAt(0);
+		for (int i = 0; i < nombre.length(); i++) {
+			if (nombre.charAt(i) == ' ') {
+				iniciales += nombre.charAt(i + 1);
 			}
 		}
 		iniciales = iniciales.toUpperCase();
 		return iniciales;
 	}
-		
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -98,6 +100,7 @@ public class Contacto {
 		result = prime * result + ((telefono == null) ? 0 : telefono.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -108,16 +111,15 @@ public class Contacto {
 			return false;
 		final Contacto other = (Contacto) obj;
 		if (Objects.equals(this.nombre.toUpperCase(), other.nombre.toUpperCase())) {
-            return true;
-        }
-        if (!Objects.equals(this.telefono, other.telefono)) {
-            return false;
-        }
-        if (!Objects.equals(this.correo, other.correo)) {
-            return false;
-        }
-        return true;
+			return true;
+		}
+		if (!Objects.equals(this.telefono, other.telefono)) {
+			return false;
+		}
+		if (!Objects.equals(this.correo, other.correo)) {
+			return false;
+		}
+		return true;
 	}
 
-	
 }
