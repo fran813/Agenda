@@ -1,11 +1,13 @@
 package org.iesalandalus.programacion.agenda.modelo;
 
 import static org.junit.Assert.*;
+
+import org.iesalandalus.programacion.agenda.Contacto;
 import org.junit.Test;
 
 public class ContactoTest {
 	
-/*	private static final String MENSAJE_EXCEPCION = "Debería haber saltado la excepción.";
+private static final String MENSAJE_EXCEPCION = "Debería haber saltado la excepción.";
 
 	@Test
 	public void constructorValidoTest() {
@@ -18,7 +20,7 @@ public class ContactoTest {
 		assertEquals("650112233", contacto.getTelefono());
 		assertEquals("andres66@servidor.com", contacto.getCorreo());
 	}
-	
+
 	@Test
 	public void constructorNombreNoValidoTest() {
 		Contacto contacto = null;
@@ -37,7 +39,7 @@ public class ContactoTest {
 			assertNull(contacto);
 		}
 	}
-	
+
 	@Test
 	public void constructorTelefonoNoValidoTest() {
 		Contacto contacto = null;
@@ -77,7 +79,7 @@ public class ContactoTest {
 			assertNull(contacto);
 		}
 	}
-	
+
 	@Test
 	public void constructorCorreoNoValidoTest() {
 		Contacto contacto = null;
@@ -131,7 +133,7 @@ public class ContactoTest {
 	public void toStringTest() {
 		Contacto contacto = new Contacto("José Ramón", "950112233", "joseramon.jimenez@iesalandalus.org");
 		assertEquals("JR [950112233, joseramon.jimenez@iesalandalus.org]", contacto.toString());
-		contacto = new Contacto("josé      ramón  jiménez", "950112233", "joseramon.jimenez@iesalandalus.org");
+		contacto = new Contacto("josé   ramón  jiménez", "950112233", "joseramon.jimenez@iesalandalus.org");
 		assertEquals("JRJ [950112233, joseramon.jimenez@iesalandalus.org]", contacto.toString());
 	}
 	
@@ -147,5 +149,5 @@ public class ContactoTest {
 		assertEquals(contacto1, contacto2);
 		assertEquals(contacto1, contacto3);
 	}
-*/
+
 }
