@@ -14,13 +14,26 @@ public class Agenda {
 		public Contacto[]getContactos() {
 			
 			Contacto arrayContactos [] = new Contacto[getNumContactos()];
-			Contacto [] contactos = new Contacto[getNumContactos()];
+			Contacto [] copiaDeContactos = new Contacto[getNumContactos()];
 			
-			System.arraycopy(arrayContactos, 0, contactos, 0, getNumContactos());
-			return contactos;
+			System.arraycopy(arrayContactos, 0, copiaDeContactos, 0, getNumContactos());
+			return copiaDeContactos;
 			
 		}
+		
+		
 		public int getNumContactos() {
 			return numContactos;
 		}
-}	
+		
+		
+		public void anadir(Contacto contacto) {
+			
+		}
+		
+		private int buscarPrimerIndiceComprobandoExistencia(Contacto contacto) {
+			
+		private boolean indiceNoSuperaTamano (int ) {
+			
+		}
+	
