@@ -6,7 +6,7 @@ import java.util.regex.*;
 public class Contacto {
 
 	private static final String ER_TELEFONO = "^[6 9][0-9]{8}$";
-	private static final String ER_CORREO = "^\\w+.+[@][a-z]+[.][a-z]{2,5}$";
+	private static final String ER_CORREO = "^\\w+.+[@][a-z]+[.][a-z]{1,5}$";
 
 	private String nombre;
 	private String telefono;
