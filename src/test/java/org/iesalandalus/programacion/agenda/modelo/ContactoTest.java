@@ -1,6 +1,9 @@
 package org.iesalandalus.programacion.agenda.modelo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
 
 import org.iesalandalus.programacion.agenda.Contacto;
 import org.junit.Test;

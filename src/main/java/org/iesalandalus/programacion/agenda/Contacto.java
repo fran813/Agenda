@@ -80,15 +80,16 @@ public class Contacto {
 	}
 
 	private String getIniciales() {
-
-		String iniciales = "" + nombre.charAt(0);
-		for (int i = 0; i < nombre.length(); i++) {
-			if (nombre.charAt(i) == ' ') {
-				iniciales += nombre.charAt(i + 1);
+		
+		String iniciales = "";
+		String [] arrayIniciales = nombre.split(" ");		
+		for (int i = 0; i < arrayIniciales.length; i++) {
+			if (!arrayIniciales[i].equals("")) {
+				iniciales = iniciales + arrayIniciales[i].toUpperCase().charAt(0);
 			}
 		}
-		iniciales = iniciales.toUpperCase();
 		return iniciales;
+		
 	}
 
 	@Override
