@@ -3,37 +3,38 @@ package org.iesalandalus.programacion.agenda;
 public class Agenda {
 
 	private static final int MAX_CONTACTOS = 100;
-	
-		private int numContactos;
-		
-		public Agenda() {
-			
-			this.numContactos = numContactos;
+
+	private int numContactos;
+
+	private Contacto[] contactos;
+
+	public Agenda() {
+
+		numContactos = 0;
+		contactos = new Contacto[MAX_CONTACTOS];
+	}
+
+	public Contacto[] getContactos() {
+
+		Contacto[] copiaContactos = new Contacto[MAX_CONTACTOS];
+		for (int i = 0; i < copiaContactos.length; i++) {
+			copiaContactos[i] = contactos[i];
 		}
-		
-		public Contacto[]getContactos() {
-			
-			Contacto arrayContactos [] = new Contacto[getNumContactos()];
-			Contacto [] copiaDeContactos = new Contacto[getNumContactos()];
-			
-			System.arraycopy(arrayContactos, 0, copiaDeContactos, 0, getNumContactos());
-			return copiaDeContactos;
-			
-		}
-		
-		
-		public int getNumContactos() {
-			return numContactos;
-		}
-		
-		
-		public void anadir(Contacto contacto) {
-			
-		}
-		
-		private int buscarPrimerIndiceComprobandoExistencia(Contacto contacto) {
-			
-		private boolean indiceNoSuperaTamano (int ) {
+
+		return copiaContactos;
+	}
+
+	public int getNumContactos() {
+
+		return numContactos;
+	}
+
+	public void anadir(Contacto contacto) {
 			
 		}
-	
+
+	private int buscarPrimerIndiceComprobandoExistencia(Contacto contacto) {
+
+	private boolean indiceNoSuperaTamano (int ) {
+			
+		}
